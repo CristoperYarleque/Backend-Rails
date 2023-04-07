@@ -82,6 +82,6 @@ test:
 production:
   <<: *default
   url: <%= ENV["DATABASE_URL"] %>
-  database: rails_get_that_home_production
-  username: rails_get_that_home
-  password: <%= ENV["RAILS_GET_THAT_HOME_DATABASE_PASSWORD"] %>
+  database: railwayapp_production
+  username: railwayapp
+  password: <%= ENV["RAILWAYAPP_DATABASE_PASSWORD"] %>
