@@ -81,6 +81,13 @@ test:
 #
 production:
   <<: *default
-  database: rails_get_that_home_production
-  username: rails_get_that_home
-  password: <%= ENV["RAILS_GET_THAT_HOME_DATABASE_PASSWORD"] %>
+  # database: rails_get_that_home_production
+  # username: rails_get_that_home
+  # password: <%= ENV["RAILS_GET_THAT_HOME_DATABASE_PASSWORD"] %>
+  adapter: postgresql
+  encoding: unicode
+  host: containers-us-west-184.railway.app
+  port: 7302
+  database: railway
+  username: postgres
+  password: MD3TSBDSON0NXQ2QEeeQ
