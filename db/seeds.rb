@@ -15,7 +15,9 @@ user_test = User.create(name: "testino", email: "testino@mail.com", password: "1
     search_photos = Unsplash::Photo.search("hoteles")
     random_photo = search_photos.sample
     file = URI.open(random_photo.urls["regular"])
-    property.photos.attach(io: file, filename: "hotel-#{i}")
+    image = Cloudinary::Uploader.upload(file)
+    property.photos.create(image: image["url"])
+    # property.photos.attach(io: file, filename: "hotel-#{i}")
   end
 end
 
