@@ -11,6 +11,7 @@ class CreateProperties < ActiveRecord::Migration[7.0]
       t.integer :bathrooms
       t.integer :area
       t.boolean :pets_allowed
+      t.boolean :status
       t.string :description
 
       t.timestamps

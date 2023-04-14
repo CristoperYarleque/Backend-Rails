@@ -24,11 +24,11 @@ class Property < ApplicationRecord
   #   end
   # end
 
-  def as_json(options = {})
-    super(options.merge(include: :photos)).tap do |json|
-      json['photo_urls'] = photo_urls
-    end
-  end
+  # def as_json(options = {})
+  #   super(options.merge(include: :photos)).tap do |json|
+  #     json['photo_urls'] = photo_urls
+  #   end
+  # end
 
   def photo_urls
     photos.map do |photo|

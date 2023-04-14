@@ -21,4 +21,10 @@ class User < ApplicationRecord
   def password_required?
     password.present? || !persisted?
   end
+
+  def photo_urls
+    photos.map do |photo|
+      photo.image
+    end
+  end
 end

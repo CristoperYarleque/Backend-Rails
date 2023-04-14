@@ -61,6 +61,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_12_015351) do
     t.integer "bathrooms"
     t.integer "area"
     t.boolean "pets_allowed"
+    t.boolean "status"
     t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
